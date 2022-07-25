@@ -1,5 +1,8 @@
 require('dotenv').config();
+const mongoose = require('mongoose');
 
+                                                            //-vlas9.mongodb.net
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let Person;
 
@@ -18,6 +21,7 @@ const findPeopleByName = (personName, done) => {
 const findOneByFood = (food, done) => {
   done(null /*, data*/);
 };
+
 
 const findPersonById = (personId, done) => {
   done(null /*, data*/);
